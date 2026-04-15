@@ -1,138 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etsu Ko</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ETSUKO</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #fafaf9;
-      color: #1a1a1a;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      background: #fff;
+      color: #000;
     }
 
-    .card {
-      background: #ffffff;
-      border: 1px solid #e8e8e5;
-      border-radius: 16px;
-      padding: 3rem;
-      max-width: 620px;
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
       width: 100%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      background: white;
+      z-index: 1000;
     }
 
-    .avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: #EEEDFE;
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 100vh;
+      background: url("images/0P8A1188.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
-      font-weight: 500;
-      color: #534AB7;
-      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
     }
 
-    h1 {
-      font-size: 28px;
-      font-weight: 500;
-      margin-bottom: 4px;
+    /* 暗层 */
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.2);
+      top: 0;
+      left: 0;
     }
 
-    .role {
-      font-size: 15px;
-      color: #666;
-      margin-bottom: 1.5rem;
+    /* 内容 */
+    .hero-content {
+      position: relative;
+      color: white;
+      z-index: 1;
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid #e8e8e5;
-      margin: 1.5rem 0;
+    .hero h1 {
+      font-size: 48px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
 
-    p {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.8;
-      margin-bottom: 1rem;
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 1.5rem 0;
-    }
-
-    .tag {
-      background: #0c0294;
-      color: #73ff00;
-      font-size: 12px;
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-
-    .links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .links a {
-      font-size: 13px;
-      color: #555;
+    .btn {
+      padding: 12px 30px;
+      border: 1px solid white;
+      color: white;
       text-decoration: none;
-      padding: 6px 16px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s;
     }
 
-    .links a:hover {
-      background: #f5f5f3;
+    .btn:hover {
+      background: white;
+      color: black;
     }
+
   </style>
 </head>
+
 <body>
-  <div class="card">
 
-    <!-- Your initials go here -->
-    <div class="avatar">YN</div>
-
-    <!-- Your name and short title -->
-    <h1>Etsu Ko</h1>
-    <p class="role">Designer · Developer · Writer — Tokyo, Japan</p>
-
-    <hr>
-
-    <!-- Your bio — write 2–3 short paragraphs about yourself -->
-    <p>こんにちわ。私はコエツと申します。</p>
-
-    <p>When I'm not at my desk, you'll find me exploring coffee shops, hiking, or reading a good book.</p>
-
-    <!-- Your interests — add or remove tags freely -->
-    <div class="tags">
-      <span class="tag">Web design</span>
-      <span class="tag">Photography</span>
-      <span class="tag">Coffee</span>
-      <span class="tag">Hiking</span>
+  <!-- NAV -->
+  <div class="navbar">
+    <div class="logo">ETSUKO</div>
+    <div class="nav-links">
+      <div>FASHION</div>
+      <div>JEWELRY</div>
+      <div>WATCH</div>
+      <div>ABOUT</div>
     </div>
-
-    <!-- Your links — replace # with your real URLs -->
-    <div class="links">
-      <a href="https://github.com/yourusername">GitHub</a>
-      <a href="https://twitter.com/yourusername">Twitter</a>
-      <a href="mailto:you@email.com">Email me</a>
-    </div>
-
   </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p>こんにちわ</p>
+      <h1>ETSUKO</h1>
+      <a href="#" class="btn">Explore</a>
+    </div>
+  </section>
+
 </body>
 </html>
